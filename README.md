@@ -1,13 +1,14 @@
 # PRESTO__pulsar
 Este github é direcionado para a instalação do programa PRESTO__pulsar,  e suas configurações.
 
-Estou realizando a instalação inicialmente no meu computador pessoal, nele tenho o terminal ubuntu, logo o processo de instalação está próximo ao original,  a referencia utilizada é o git  [PRESTO](https://github.com/scottransom/presto/blob/master/INSTALL.md)
+A instalação será feita no sistema operacacional windows, onde tenho terminal do linux no ubuntu, logo o processo de instalação será feito como o arquivo original,  de referência [PRESTO](https://github.com/scottransom/presto/blob/master/INSTALL.md)
 
-Como sempre, há um conjunto de pacotes essenciais necessários para construir o PRESTO. Este comando deve funcionar em um sistema semelhante ao Debian/Ubuntu, assim, instale no seu computador 
+O PRESTO tem alguns pré-requisitos, 
+deve funcionar em um sistema semelhante ao Debian/Ubuntu, assim, instale no seu computador 
 
 ## 1- Primeiros passos
 
-Instale esses pacotes no seu computador, se você for linux, cole noterminal, ou ainda, se prefere pode instalar em algum ambiente conda.
+Instale os  pacotes indicados a abaixo no seu computador, se você for linux, cole noterminal, ou ainda, se prefere pode instalar em algum ambiente conda.
 
 ```ruby
 Sudo apt-get install git build-essential libfftw3-bin libfftw3-dev pgplot5 libglib2.0-dev libcfitsio-bin libcfitsio-dev libpng-dev latex2html gfortran tcsh autoconf libx11-dev python3-dev python3-numpy python3-pip
