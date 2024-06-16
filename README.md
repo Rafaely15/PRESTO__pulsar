@@ -7,6 +7,8 @@ Como sempre, há um conjunto de pacotes essenciais necessários para construir o
 
 ## 1- Primeiros passos
 
+Instale esses pacotes no seu computador, se você for linux, cole noterminal, ou ainda, se prefere pode instalar em algum ambiente conda.
+
 ```ruby
 Sudo apt-get install git build-essential libfftw3-bin libfftw3-dev pgplot5 libglib2.0-dev libcfitsio-bin libcfitsio-dev libpng-dev latex2html gfortran tcsh autoconf libx11-dev python3-dev python3-numpy python3-pip
 ```
