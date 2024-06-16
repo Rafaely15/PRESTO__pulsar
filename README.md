@@ -54,10 +54,10 @@ No documento original ele da duas opções de para compilação, o Python virtua
 Com isso criei um novo ambiente (env)
 
 ```ruby
-conda create --name fetch_env python=3.10
-conda activate fetch_env
+conda create --name presto_env python=3.10
+conda activate presto_env
 conda install -c matplotlib numpy pandas scipy ipykernel 
-python -m ipykernel install --user --name fetch_env --display-name "fetch_env"
+python -m ipykernel install --user --name presto_env --display-name "presto_env"
 
 ```
 Agora edite o arquivo `~/.bashrc` com o comando `nano ~/.bashrc` e coloque na última linha o conteúdo abaixo:
