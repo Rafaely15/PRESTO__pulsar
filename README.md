@@ -215,3 +215,18 @@ Finalmente, verifique a instalação executando o comando `tempo`:
 tempo
 
 ```
+Assim, retornaremos a pasta do presto ,   com o comando 
+
+```Ruby
+cd ..
+
+```
+Posteriormente, teste com o comando 
+```Ruby
+python tests/test_presto_python.py
+
+```
+```Ruby
+tempo
+
+```
