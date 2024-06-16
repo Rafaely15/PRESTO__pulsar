@@ -38,7 +38,7 @@ export PATH=$HOME/bin:$PATH
 
 No seu caso, será preciso modificar o caminho dos ambientes como no caso da linha `export LD_LIBRARY_PATH=/home/seu/caminho/do/arquivo/utilizado/x86_64-linux-gnu:$LD_LIBRARY_PATH`.
 
-Posteriormente a isso utilize o comando 
+Posteriormente a isso utilize `Ctrl + 0` depois `Ctrl + X` e por  fim `Y`, posteriormente coloque no terminal o comando 
 
 ```ruby
 source ~/.bashrc
