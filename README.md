@@ -230,3 +230,13 @@ python tests/test_presto_python.py
 tempo
 
 ```
+Após isso, vamos ppar aoproximo passo
+
+```Ruby
+python examplescripts/ffdot_example.py
+python python/fftfit_src/test_fftfit.py
+```
+
+E foi preciso iniciar a instalação do [PGPLOT](https://sites.astro.caltech.edu/~tjp/pgplot/install.html)
+
+(...Continua...)
