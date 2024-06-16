@@ -1,5 +1,5 @@
 # PRESTO__pulsar
-Nesse github será direcionado para a instalação do programa PRESTO__pulsar,  e sua configurações utilizadas
+Nesse github é direcionado para a instalação do programa PRESTO__pulsar,  e sua configurações utilizadas
 
 Estou realizando a instalação inicialmente no meu computador pessoal, nele tenho o terminal ubuntu, logo o processo de instalação está próximo ao original,  a referencia utilizada é o git  [PRESTO](https://github.com/scottransom/presto/blob/master/INSTALL.md)
 
