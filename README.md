@@ -139,21 +139,79 @@ O autor informa: Você verá muitos avisos do compilador devido à minha péssim
 Finalmente, instale os códigos e ligações Python via pip:
 
 ```Ruby
-cd $PRESTO
+cd presto
 tests/ python test_presto_python.py
 ```
-Ao executar o primeiro comando, apareceu um erro relacionado a um pacote que está faltando chamado `TEMPO`.
+Ao executar o primeiro comando, apareceu um erro relacionado a um pacote que está faltando chamado `TEMPO`. Para resolver o problema, na própria pagina de instalação tem o repositório indicado de link [TEMPO](https://tempo.sourceforge.net/), ou simplesmente faça
 
+## 4. Instalação do TEMPO
+
+```Ruby
+cd presto
+git clone git://git.code.sf.net/p/tempo/tempo
+```
+Você notará que aparecerá uma nova pasta chamada tempo no repositório do `presto`, para verificar use o comando
 
 
 ```Ruby
-meson compile -C build
-meson install -C build
-
+cd tempo
 ```
 
 ```Ruby
-meson compile -C build
-meson install -C build
+./prepare
+
+```
+ Instalar C shell (csh)
+Primeiro, instale o csh no seu sistema:
+
+```Ruby
+sudo apt-get update
+sudo apt-get install csh
+
+```
+Por fim,
+
+Instalar Ferramentas de Desenvolvimento
+Primeiro, instale as ferramentas de desenvolvimento, incluindo autoconf, automake e libtool.
+
+```Ruby
+sudo apt-get update
+sudo apt-get install autoconf automake libtool
+```
+ Executar o Script `prepare`
+Depois de instalar as ferramentas, execute novamente o script prepare:
+
+
+```Ruby
+cd ~/presto/tempo
+./prepare
+
+```
+Seguir os Passos de Configuração e Compilação
+Continue com os passos de configuração e compilação:
+
+```Ruby
+./configure
+make
+sudo make install
+
+```
+Adicionar ao PATH (se necessário)
+Se necessário, adicione o diretório de instalação ao PATH:
+
+
+
+```Ruby
+export PATH=/usr/local/bin:$PATH
+echo 'export PATH=/usr/local/bin:$PATH' >> ~/.bashrc
+source ~/.bashrc
+
+
+```
+Verificar a Instalação
+Finalmente, verifique a instalação executando o comando `tempo`:
+
+```Ruby
+tempo
 
 ```
