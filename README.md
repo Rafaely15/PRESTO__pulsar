@@ -158,9 +158,10 @@ Após isso, vamos para o proximo passo
 python examplescripts/ffdot_example.py
 python python/fftfit_src/test_fftfit.py
 ```
+## 5. Instalação do [Instal_pgplot](https://github.com/Rafaely15/PRESTO__pulsar/blob/main/PGPLOT.md)
 
 Manual do PGPLOT: [PGPLOT](https://sites.astro.caltech.edu/~tjp/pgplot/install.html) 
 
-Como instalei o PGPLOT: [Instal_pgplot](https://github.com/Rafaely15/PRESTO__pulsar/blob/main/PGPLOT.md)
+
 
 
