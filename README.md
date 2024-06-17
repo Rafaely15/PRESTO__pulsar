@@ -151,6 +151,7 @@ Nessa parte você precisará  instalar o `Tempo`
 
 ## 4. Instalação do [TEMPO](https://github.com/Rafaely15/PRESTO__pulsar/blob/main/TEMPO.md)
 
+## 5. Retorno da instalação do PRESTO
 
 Após isso, vamos para o proximo passo
 
@@ -161,10 +162,11 @@ Após isso, vamos para o proximo passo
 
 Na segunda linha do código, será solicitado a isntalação do Pgplot.
 
-## 5. Instalação do [Instal_pgplot](https://github.com/Rafaely15/PRESTO__pulsar/blob/main/PGPLOT.md)
+## 6. Instalação do [Instal_pgplot](https://github.com/Rafaely15/PRESTO__pulsar/blob/main/PGPLOT.md)
 
 Manual do PGPLOT: [PGPLOT](https://sites.astro.caltech.edu/~tjp/pgplot/install.html) 
 
+## 7. Retorno da instalação do Presto
 
 
 
