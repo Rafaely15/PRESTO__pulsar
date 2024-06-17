@@ -149,7 +149,7 @@ Ao executar o primeiro comando, apareceu um erro relacionado a um pacote que est
 
 Nessa parte você precisará  instalar o `Tempo`
 
-## 4. Instalação do [TEMPO](https://github.com/Rafaely15/PRESTO__pulsar/new/main)
+## 4. Instalação do [TEMPO](https://github.com/Rafaely15/PRESTO__pulsar/blob/main/TEMPO.md)
 
 
 Após isso, vamos para o proximo passo
