@@ -175,4 +175,25 @@ clean:
 
 ```
 
-Após isso, 
+Após isso, você precisará corrigir os erros de forma manual dentro no makefile,  substituindo da forma
+
+```Ruby
+# Makefile for PGPLOT
+#
+# Variáveis de diretório
+SRC = ./src
+SRCDIR = ./src
+
+# Compilador e flags
+FCOMPL = gfortran
+FFLAGS = -I$(SRCDIR)
+
+# Flags de ligação
+LDFLAGS = -L/path/to/pgplot/lib
+LIBS = -lpgplot -lcpgplot -lX11  # Exemplo, ajuste conforme suas bibliotecas necessárias
+
+# Regras de compilação
+pgarro.o: $(SRCDIR)/pgarro.f
+    $(FCOMPL) $(FFLAGS) -c $(SRCDIR)/pgarro.f -o pgarro.o $(LDFLAGS) $(LIBS)
+```
+(Continua)
