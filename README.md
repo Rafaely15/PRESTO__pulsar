@@ -147,6 +147,8 @@ tests/ python test_presto_python.py
 ```
 Ao executar o primeiro comando, apareceu um erro relacionado a um pacote que está faltando chamado `TEMPO`. Para resolver o problema, na própria pagina de instalação tem o repositório indicado de link [TEMPO](https://tempo.sourceforge.net/), ou simplesmente faça
 
+Nessa parte você precisará  instalar o `Tempo`
+
 ## 4. Instalação do TEMPO
 
 ```Ruby
@@ -233,13 +235,15 @@ python tests/test_presto_python.py
 tempo
 
 ```
-Após isso, vamos ppar aoproximo passo
+Após isso, vamos para o proximo passo
 
 ```Ruby
 python examplescripts/ffdot_example.py
 python python/fftfit_src/test_fftfit.py
 ```
 
-E foi preciso iniciar a instalação do [PGPLOT](https://sites.astro.caltech.edu/~tjp/pgplot/install.html)
+Manual do PGPLOT: [PGPLOT](https://sites.astro.caltech.edu/~tjp/pgplot/install.html) 
 
-(...Continua...)
+Como instalei o PGPLOT: [Instal_pgplot](https://github.com/Rafaely15/PRESTO__pulsar/blob/main/PGPLOT.md)
+
+
