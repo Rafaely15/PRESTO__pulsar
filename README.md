@@ -155,9 +155,12 @@ Nessa parte você precisará  instalar o `Tempo`
 Após isso, vamos para o proximo passo
 
 ```Ruby
-python examplescripts/ffdot_example.py
-python python/fftfit_src/test_fftfit.py
+1- python examplescripts/ffdot_example.py
+2- python python/fftfit_src/test_fftfit.py
 ```
+
+Na segunda linha do código, será solicitado a isntalação do Pgplot.
+
 ## 5. Instalação do [Instal_pgplot](https://github.com/Rafaely15/PRESTO__pulsar/blob/main/PGPLOT.md)
 
 Manual do PGPLOT: [PGPLOT](https://sites.astro.caltech.edu/~tjp/pgplot/install.html) 
