@@ -21,7 +21,9 @@ Baixe o PGPLOT do site oficial. Você pode fazer isso usando wget:
 ```Ruby
 wget ftp://ftp.astro.caltech.edu/pub/pgplot/pgplot522.tar.gz
 
-``` 
+```
+
+
 
 Extraia o arquivo abaixo 
 
@@ -137,3 +139,40 @@ cd ~/pgplot
 ./pgdemo1
 
 ```
+
+O erro permaneceu, e com isso foi preciso adicionar manualmente alguns parametros no makefile
+
+```Ruby
+nano makefil
+```
+Editar o makefile:
+
+Certifique-se de que as seguintes linhas estão presentes e corretamente configuradas:
+
+```Ruby
+# Define o compilador Fortran
+F77 = gfortran
+
+# Define o diretório contendo os arquivos de fonte
+SRCDIR = ./src
+
+# Define as flags de compilação
+FFLAGS = -I$(SRCDIR) -u
+
+# Lista de arquivos objeto a serem criados
+OBJS = $(patsubst $(SRCDIR)/%.f,%.o,$(wildcard $(SRCDIR)/*.f))
+
+# Regra padrão para compilar todos os arquivos objeto
+all: $(OBJS)
+
+# Regra para compilar arquivos .o a partir dos arquivos .f
+%.o: $(SRCDIR)/%.f
+    $(F77) $(FFLAGS) -c $< -o $@
+
+# Limpeza dos arquivos compilados
+clean:
+    rm -f $(OBJS) pgplot
+
+```
+
+Após isso, 
