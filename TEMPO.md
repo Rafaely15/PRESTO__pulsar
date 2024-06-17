@@ -82,3 +82,8 @@ python tests/test_presto_python.py
 ```
 ```Ruby
 tempo
+```
+
+Instalação concluida com sucesso!
+
+
