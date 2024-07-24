@@ -1,4 +1,4 @@
-# Insalação e tutorial de instalação da chave SSH
+# Instalação e tutorial de instalação da chave SSH
 
 ### Passo 1:  Instale o Git:
 Primeiro, certifique-se de que o Git está instalado no seu sistema. Você pode instalar o Git usando o gerenciador de pacotes da sua distribuição. Para o Ubuntu, você pode usar o seguinte comando:
@@ -79,68 +79,15 @@ Hi username! You've successfully authenticated, but GitHub does not provide shel
 ```
 
 
-# Tutorial: Configuração do GitHub com SSH e Envio de Commits
+# Tutorial: Envio de Commits
 
-## 1. Configurando a Chave SSH
-
-### Passo 1: Gerar uma nova chave SSH
-
-1. Abra o terminal no Linux.
-2. Gere uma nova chave SSH com o comando:
-
-   ```sh
-   ssh-keygen -t ed25519 -C "seu-email@example.com"
-   ```
-
-3. Substitua seu-email@example.com pelo seu e-mail associado ao GitHub.
-
-4. Quando solicitado a "Enter file in which to save the key", pressione Enter para aceitar o caminho padrão.
-
-Se solicitado, digite uma senha para proteger a chave SSH. (Você pode deixar em branco se não quiser usar uma senha).
-
-5. Após a geração, a chave pública será salva em ~/.ssh/id_ed25519.pub.
-
-
-### Passo 2: Adicionar a Chave SSH ao Agente SSH
-1. Inicie o agente SSH:
-
-```Ruby 
-eval "$(ssh-agent -s)"
-```
-
-
-2. Adicione a chave SSH ao agente:
-
-sh
-```Ruby 
-ssh-add ~/.ssh/id_ed25519
-```
-
-### Passo 3: Adicionar a Chave SSH ao GitHub
-1. Copie o conteúdo da chave pública para a área de transferência:
-```Ruby 
-cat ~/.ssh/id_ed25519.pub
-```
-
-
-1. Copie o conteúdo exibido.
-
-2. Acesse GitHub e faça login na sua conta.
-
-3. Vá para Settings (Configurações) -> SSH and GPG keys -> New SSH key.
-
-4. Cole o conteúdo da chave pública no campo "Key" e adicione um título descritivo, como "Meu Laptop".
-
-5. Clique em Add SSH key para salvar.
-
-## 2. Configurando o Repositório Git Local
+## 1. Configurando o Repositório Git Local
 
 ### Passo 1: Inicializar o Repositório Git
 
 1. Navegue até o diretório do seu projeto:
 
 ```Ruby 
-
 cd /caminho/para/seu/projeto
 ```
 
@@ -148,9 +95,7 @@ cd /caminho/para/seu/projeto
 
 
 ```Ruby 
-
 git init
-
 ```
 
 ### Passo 2: Configurar a URL Remota com SSH
@@ -158,7 +103,6 @@ git init
 
 
 ```Ruby 
-
 git remote -v
 ```
 
@@ -166,7 +110,6 @@ git remote -v
 
 
 ```Ruby 
-
 git remote remove origin
 ```
 
@@ -183,13 +126,11 @@ Substitua seu-usuario e nome-do-repositorio pelos valores apropriados.
 1. Adicione os arquivos que você deseja versionar:
 
 ```Ruby 
-
 git add nome-do-arquivo
 ```
 2. Faça um commit com uma mensagem descritiva:
 
 ```Ruby 
-
 git commit -m "Sua mensagem de commit"
 ```
 3. Envie suas alterações para o repositório remoto:
@@ -230,3 +171,31 @@ Você deve ver uma mensagem como:
 Hi seu-usuario! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
+## Modificar o repostório para enviar os arquivos.
+
+
+### Passo 1: Navegue para o diretório do repositório local que você deseja
+```Ruby
+cd /caminho/para/seu/repositorio
+```
+
+### Passo 2: Remova a URL remota existente
+```Ruby
+git remote remove origin
+```
+
+### Passo 3: Adicione a nova URL remota
+```Ruby
+git remote add origin git@github.com:novo-usuario/novo-repositorio.git
+```
+
+### Passo 4: Verifique a nova URL remota
+```Ruby
+git remote -v
+```
+### Passo 5: Adicione, commit e envie as mudanças para o novo repositório
+```Ruby
+git add .
+git commit -m "Sua mensagem de commit"
+git push -u origin master
+```
