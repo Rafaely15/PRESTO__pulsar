@@ -199,3 +199,36 @@ git add .
 git commit -m "Sua mensagem de commit"
 git push -u origin master
 ```
+
+# Como remover um arqivo do repositório
+
+1.  Navegar até o diretório do repositório:
+
+```Ruby
+cd /caminho/para/seu/repositorio
+```
+2. Remover o arquivo:
+
+```Ruby
+git rm nome-do-arquivo
+```
+3. ou, para apenas removê-lo do repositório mas mantê-lo no sistema de arquivos:
+
+```Ruby
+git rm --cached nome-do-arquivo
+```
+4. Fazer o commit das mudanças:
+
+```Ruby
+git commit -m "Remover arquivo nome-do-arquivo"
+```
+5. Enviar as mudanças para o repositório remoto:
+
+```Ruby
+git push origin master
+```
+ou 
+
+```Ruby
+git push origin main
+```
