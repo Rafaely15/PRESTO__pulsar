@@ -133,12 +133,34 @@ git add nome-do-arquivo
 ```Ruby 
 git commit -m "Sua mensagem de commit"
 ```
-3. Envie suas alterações para o repositório remoto:
+
+3. Verificar o status
+```Ruby 
+git status
+```
+4. Envie suas alterações para o repositório remoto:
 
 ```Ruby 
-git push -u origin master
+git push origin master
 ```
 O -u configura o rastreamento do branch local com o branch remoto.
+
+5. Caso aconteça erros no envio, conect novameente para o repositório remoto.
+
+```Ruby
+git remote -v
+```
+6. Adiionar o repositório remoto
+```Ruby
+git remote add origin git@github.com:Rafaely15/Gitest.git
+```
+7. Confirme que está conectado
+```Ruby
+git remote -v
+```
+```Ruby
+git push origin master
+```
 
 ## Verificação e Manutenção
 
@@ -232,3 +254,8 @@ ou
 ```Ruby
 git push origin main
 ```
+
+
+
+Finalizado.
+
