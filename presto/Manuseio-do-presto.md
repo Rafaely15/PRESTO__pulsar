@@ -543,3 +543,10 @@ Continua..
 Falta apenas alumas partes.
 
 
+
+Para passar dados do computador OSLO para o me computador local, chegamos a
+
+```Ruby
+ scp -r ana@oslo.ime.unicamp.br:/home/ana/dadospsrfits /home/rafaely/
+```
+
