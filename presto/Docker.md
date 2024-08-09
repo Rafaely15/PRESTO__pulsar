@@ -12,7 +12,7 @@ docker pull alex88ridolfi/presto5:png
 singularity pull docker://alex88ridolfi/presto5:latest
 singularity pull docker://alex88ridolfi/presto5:png
 ```
-Para mais informações verifique ([Docker_presto]https://github.com/scottransom/presto/blob/master/INSTALL.md)
+Para mais informações verifique [Docker_presto](https://github.com/scottransom/presto/blob/master/INSTALL.md)
 
 Para entrar no bash do presto 
 
