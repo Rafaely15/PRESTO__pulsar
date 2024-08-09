@@ -19,7 +19,27 @@ Para entrar no bash do presto
 ```Ruby
 docker run -it alex88ridolfi/presto5:png /bin/bash
 ```
+caso você tenha perdido o conteiner, basta saber o ID do conteiner e executar o seguinte comando
+```Ruby
+docker start 9747ec45499a 
+```
+ou 
+```Ruby
+docker start <ID>
+```
 
+Após isso, você faz para ver os conteiner usados
+```Ruby
+docker ps -la 
+```
+para usar novamente o conteiner você usa
+```Ruby
+docker exec -it 9747ec45499a /bin/bash
+```
+ou 
+```Ruby
+docker exec -it <ID> /bin/bash
+```
 ### 3. Uso do presto
 
 Verificar quais dcoker estão em execução 
