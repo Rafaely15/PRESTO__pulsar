@@ -373,21 +373,36 @@ Digite no terminal
 ```Ruby
 makezaplist.py Lband.birds
 ```
+caso de erro, de não encontrar, você deve encontrar onde está o repositorio, ao encontrar copie para o seu caso. 
+
+```Ruby
+cp ./tests/Lband.birds .
+```
+
 Digite no terminal 
 ```Ruby
-zapbirds -zap -zapfile Lband.zaplist \
-Lband_topo_DM0.00.fft
+zapbirds -zap -zapfile Lband.zaplist \Lband_topo_DM0.00.fft
 ```
 Digite no terminal 
 ```Ruby
 prepdata -o tmp GBT_Lband_PSR.fil | grep Average
+```
+Voce receberá como resposta
+```Ruby
 Average topocentric velocity (c) = -5.697334e-05
 ```
 Digite no terminal 
+
 ```Ruby
-DDplan.py -d 500.0 -n 96 -b 96 -t 0.000072 \
--f 1400.0 -s 32 -r 0.5
+DDplan.py -d 500.0 -n 96 -b 96 -t 0.000072 \-f 1400.0 -s 32 -r 0.5
 ```
+no meu caso deu erro por pgplot soliciar ```device = "/xwin"```, por sugestão abra o nano e modifique o device
+
+```Ruby
+cd bin
+nano DDplan.py
+```
+modifique o device para ```device='ffdot_combined.eps/VCPS'```
 
 Digite no terminal 
 
