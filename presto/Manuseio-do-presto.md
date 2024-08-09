@@ -540,4 +540,6 @@ prepfold -n 64 -nsub 96 -p 0.004621638 -dm 62.0 \GBT_Lband_PSR.fil
 
 Continua..
 
+Falta apenas alumas partes.
+
 
