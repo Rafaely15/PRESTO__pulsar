@@ -1,0 +1,97 @@
+Para analisar o arquivo siga as seguintes instruções.
+
+
+Baixe o arquivo
+
+ > wget http://www.cv.nrao.edu/~sransom/Parkes_70cm_PSR.fits
+
+Ative o ambiente conda
+
+ > conda activate presto_env
+
+Digite no terminal, para ler o arquivo
+
+ > readfile Parkes_70cm_PSR.fits
+
+Digite no terminal 
+
+ > rfifind -time 2.0 -o Lband Parkes_70cm_PSR.fits
+ > prepdata -nobary -o Lband_topo_DM0.00 \-dm 0.0 -mask Lband_rfifind.mask \Parkes_70cm_PSR.fits
+ > exploredat Lband_topo_DM0.00.dat
+ > realfft Lband_topo_DM0.00.dat
+ > explorefft Lband_topo_DM0.00.fft
+ > cp Lband_rfifind.inf Lband.inf
+
+ao executar o comando 
+ > makezaplist.py Lband.birds
+ 
+ dará erro por não encontrar o arquivo, logo, procure com o termo
+ 
+ > cd presto
+ > find -name "Lband.birds"
+
+agora que você tem o caminho correto, digite no terminal, para que seja criado uma cópia no repostório que está sendo armazenado
+
+ > cp /home/rafaely/presto/tests/Lband.birds /home/rafaely/parkes/
+
+Abra a pasta onde você enviou e digite
+
+ > cd parkes
+
+ Apos isso, conseguirá rodar a função.
+ 
+ > makezaplist.py Lband.birds
+
+digite no terminal
+
+ > zapbirds -zap -zapfile Lband.zaplist \Lband_topo_DM0.00.fft
+
+digite no terminal
+
+ > prepdata -o tmp GBT_Lband_PSR.fil | grep Average
+
+digite no terminal
+
+
+ > DDplan.py -d 500.0 -n 256 -b 256 -t 0.000072 \-f 1400.0 -s 32 -r 0.5
+
+ > prepsubband -nsub 32 -lodm 0.0 -dmstep 2.0 -numdms 24 -downsamp 4 -mask Lband_rfifind.mask -o Lband Parkes_70cm_PSR.fits
+ > mkdir subbands
+ > mv *.sub* subbands/
+ > rm -f Lband*topo* tmp*
+ > ls *.dat | xargs -n 1 realfft
+ > ls *.fft | xargs -n 1 zapbirds -zap \ -zapfile Lband.zaplist -baryv -5.697334e-05
+ > prepdata -o tmp Parkes_70cm_PSR.fits | grep Average
+ > ccelsearch -zmax 0 Lband_DM0.00.fft
+ > python ACCEL_sift.py > cands.txt
+
+Nesse passo também vai acontecer o mesmo erro, portanto precisará procurar fazer uma cópia para o seu repositorio
+
+ > cp ~/presto/examplescripts/ACCEL_sift.py ~/parkes/
+ 
+Execute novamente o comando 
+
+ > python ACCEL_sift.py > cands.txt
+ 
+ > prepfold -accelcand 1 -accelfile Lband_DM62.00_ACCEL_0.cand Lband_DM62.00.dat
+ 
+ > prepfold -dm 62.0 -accelcand 1 -accelfile \Lband_DM62.00_ACCEL_0.cand \subbands/Lband_DM72.00.sub
+
+ > prepfold -n 64 -nsub 256 -p 0.004621638 -dm 62.0 Parkes_70cm_PSR.fits
+
+ > single_pulse_search.py *.dat
+ 
+ A partir daqui da erro e não consigo resolver ainda
+ 
+ > get_TOAs.py -g 0.1 -n 20 newpulsar.pfd
+ > pygaussfit.py: “-g template.gaussian”
+ > single_pulse_search.py 62 .singlepulse
+ > single_pulse_search.py
+ > get_TOAs.py -g 0.1 -n 20 newpulsar.pfd
+ > ls -l newpulsar.pfd
+ > cd ..
+ > find -name "newpulsar.pfd"
+ > cd presto
+ > find / -name "*.pfd"
+ > history
+
