@@ -12,7 +12,7 @@
 > singularity pull docker://alex88ridolfi/presto5:latest
 > singularity pull docker://alex88ridolfi/presto5:png
 ```
-Para mais informações verifique \href{https://github.com/scottransom/presto/blob/master/INSTALL.md}{PRESTO_INSTALL}
+Para mais informações verifique (https://github.com/scottransom/presto/blob/master/INSTALL.md)
 
 ### 3. Uso do presto
 
