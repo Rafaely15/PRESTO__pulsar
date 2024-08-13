@@ -33,6 +33,14 @@ ao executar o comando
 agora que você tem o caminho correto, digite no terminal, para que seja criado uma cópia no repostório que está sendo armazenado
 
  > cp /home/rafaely/presto/tests/Lband.birds /home/rafaely/parkes/
+----------------------------------------------------------------------------------------------------
+---------------------------No caso do docker --------------------------------------------------------
+> find / -name "Lband.birds" 
+> cp /software/presto5/tests/Lband.birds /test/ 
+> cd test
+> makezaplist.py Lband.birds
+--------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
 
 Abra a pasta onde você enviou e digite
 
