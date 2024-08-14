@@ -36,7 +36,9 @@ agora que você tem o caminho correto, digite no terminal, para que seja criado 
 ----------------------------------------------------------------------------------------------------
 ---------------------------No caso do docker --------------------------------------------------------
 > find / -name "Lband.birds" 
-> cp /software/presto5/tests/Lband.birds /test/ 
+> cp /software/presto5/tests/Lband.birds /test/
+ou ainda -- casi não pegue, tente ------------------
+> cp /software/presto5/tests/Lband.birds /software/test/
 > cd test
 > makezaplist.py Lband.birds
 --------------------------------------------------------------------------------------------------------
