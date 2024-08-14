@@ -72,7 +72,7 @@ digite no terminal
  > ls *.dat | xargs -n 1 realfft
  > ls *.fft | xargs -n 1 zapbirds -zap \ -zapfile Lband.zaplist -baryv -5.697334e-05
  > prepdata -o tmp Parkes_70cm_PSR.fits | grep Average
- > ccelsearch -zmax 0 Lband_DM0.00.fft
+ > accelsearch -zmax 0 Lband_DM0.00.fft
  > python ACCEL_sift.py > cands.txt
 
 Nesse passo também vai acontecer o mesmo erro, portanto precisará procurar fazer uma cópia para o seu repositorio
@@ -104,4 +104,8 @@ Execute novamente o comando
  > cd presto
  > find / -name "*.pfd"
  > history
+
+> exportar do docker para o ssh 
+
+rsync -av --exclude='arquivo_a_excluir.txt' /home/ana/csiro/ /home/ana/backup/
 
