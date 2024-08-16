@@ -1,4 +1,4 @@
-#Istalação do docker
+# Istalação do docker
 
 Para fazer a istalação do docker no site [Docker](https://www.nerdlivre.com.br/como-instalar-o-docker-no-ubuntu/)
 
@@ -72,14 +72,16 @@ docker cp <ID_docker>:/software/presto5/examplescripts/ffdot_combined.png /home/
 ```
 Docker sendo usado atualmente: ID 9747ec45499a.
 
-
 Para abrir o arquivo ps faça a instalação dele na sua maquina 
 ```Ruby
 sudo apt-get update
 sudo apt-get install gv
 ```
+
 Abrir o arquivo
 ```Ruby
 gv nome_do_arquivo.ps
 ```
 Para gerar e analisar os arquivos utilize o manual do presto normalmente.
+
+# Instruções adicionais 
