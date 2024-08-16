@@ -6,7 +6,7 @@ Após a instalação faça a instalação da imagem do presto.
 
 # Comandos para usar o Docker-Presto
 
-## Download do presto 
+## Download da imagem do presto e singulary 
 
 ### 1. Docker images:
 ```Ruby
@@ -25,7 +25,11 @@ Para entrar no bash do presto
 ```Ruby
 docker run -it alex88ridolfi/presto5:png /bin/bash
 ```
-caso você tenha perdido o conteiner, basta saber o ID do conteiner e executar o seguinte comando
+caso você tenha perdido o conteiner, execute 
+```Ruby
+Docker ps 
+```
+Com o ID em mão, coloque o ID do  conteiner e executar o seguinte comando, essa função vai startar o seu docker para que assim possa ser executado
 ```Ruby
 docker start 9747ec45499a 
 ```
@@ -34,11 +38,11 @@ ou
 docker start <ID>
 ```
 
-Após isso, você faz para ver os conteiner usados
+Após isso, você digite no terminal, e verifique se de fato foi startado o docker que você solicitou
 ```Ruby
-docker ps -la 
+docker ps 
 ```
-para usar novamente o conteiner você usa
+Assim, execute o comando para poder abrir novamente o docker e o seu bash, devo destacar que o "-it" representa você utilizar o docker de maneira interativa.
 ```Ruby
 docker exec -it 9747ec45499a /bin/bash
 ```
@@ -46,20 +50,22 @@ ou
 ```Ruby
 docker exec -it <ID> /bin/bash
 ```
-### 3. Uso do presto
+Nesse passo você já estará dentro da imagem do presto do docker, assim, digite o comando "ls" e verá que terá as pastas "Tempo, presto5"
 
-Verificar quais dcoker estão em execução 
-```Ruby
-docker ps
-```
-Reiniciar o docker que parou 
-```Ruby
-docker start -it <ID_docker> bash
-```
-Executar o docker 
-```Ruby
-docker exec -it <ID_docker> bash
-```
+
+
+### 3. Dentro da imagem do presto
+
+Para ir usando o docker siga o passo [manuseio-presto](https://github.com/Rafaely15/PRESTO__pulsar/blob/master/presto/Manuseio-do-presto.md)
+
+------------------------ Algumas informações uteis -------------------------
+
+Se você estiver usando um computador com acesso via chave ssh, e deseja vincular os arquivos que estão no ssh para que o docker tenha acesso, faça
+
+k
+
+
+
 Configurar o presto para colocar a saida png  (dentro do docker e no bash da imagem)
 ```Ruby
 nano /software/presto5/examplescripts/ffdot_example.py
