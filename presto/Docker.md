@@ -1,3 +1,9 @@
+#Istalação do docker
+
+Para fazer a istalação do docker no site [Docker](https://www.nerdlivre.com.br/como-instalar-o-docker-no-ubuntu/)
+
+Após a instalação faça a instalação da imagem do presto.
+
 # Comandos para usar o Docker-Presto
 
 ## Download do presto 
