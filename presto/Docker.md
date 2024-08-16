@@ -58,11 +58,15 @@ Nesse passo você já estará dentro da imagem do presto do docker, assim, digit
 
 Para ir usando o docker siga o passo [manuseio-presto](https://github.com/Rafaely15/PRESTO__pulsar/blob/master/presto/Manuseio-do-presto.md)
 
------------------------- Algumas informações uteis -------------------------
+------------------------ Algumas informações uteis -------------------------------------------------------
 
 Se você estiver usando um computador com acesso via chave ssh, e deseja vincular os arquivos que estão no ssh para que o docker tenha acesso, faça
 
-k
+```Ruby
+docker run -v /home/ana/data/csiro:/software/dados -d alex88ridolfi/presto5:png bash -c "mkdir -p /dados/test && tail -f /dev/null"
+
+```
+para verificar, dentro do docker faça "ls /dados"
 
 
 
